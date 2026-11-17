@@ -1,0 +1,129 @@
+:root {
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+  color: #172033;
+  background: #eef2f7;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  background:
+    radial-gradient(circle at top left, rgb(255 196 0 / 18%), transparent 36%),
+    linear-gradient(145deg, #f8fafc, #e8edf5);
+}
+
+.status-card {
+  width: min(680px, 100%);
+  padding: 48px;
+  border: 1px solid rgb(255 255 255 / 70%);
+  border-radius: 28px;
+  background: rgb(255 255 255 / 88%);
+  box-shadow: 0 30px 80px rgb(30 50 80 / 14%);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #a46b00;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(32px, 6vw, 52px);
+  letter-spacing: -0.04em;
+}
+
+.description {
+  margin: 14px 0 32px;
+  color: #647086;
+  font-size: 17px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: #fff7dc;
+  color: #805f00;
+  font-weight: 700;
+}
+
+.status.online {
+  background: #e7f8ef;
+  color: #157347;
+}
+
+.status.offline {
+  background: #fff0f0;
+  color: #b42318;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: currentcolor;
+  box-shadow: 0 0 0 5px color-mix(in srgb, currentcolor 16%, transparent);
+}
+
+.service-info {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 24px 0 0;
+}
+
+.service-info div {
+  padding: 16px;
+  border-radius: 14px;
+  background: #f5f7fb;
+}
+
+dt {
+  color: #7a8498;
+  font-size: 13px;
+}
+
+dd {
+  margin: 6px 0 0;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+@media (max-width: 560px) {
+  .app-shell {
+    padding: 18px;
+  }
+
+  .status-card {
+    padding: 28px;
+  }
+
+  .service-info {
+    grid-template-columns: 1fr;
+  }
+}
